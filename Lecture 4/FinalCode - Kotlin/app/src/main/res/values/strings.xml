@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Android Training Pharos 2020</string>
+    <string name="start_activity_static_fragment">Start Activity Static Fragment</string>
+    <string name="start_activity_dynamic_fragment">Start Activity Dynamic Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_activity_lifecycle">Open activity LifeCycle</string>
+    <string name="fragment_lifecycle">Fragment lifecycle</string>
+    <string name="increment">Increment</string>
+    <string name="static_fragment">Static Fragment</string>
+    <string name="dynamic_fragment">Dynamic Fragment</string>
+    <string name="add_fragment">Add Fragment</string>
+    <string name="start_communicator_activity">Start Communicator Activity</string>
+    <string name="names">Names</string>
+    <string name="save_to_storage">save to storage</string>
+    <string name="storage">Storage</string>
+</resources>
