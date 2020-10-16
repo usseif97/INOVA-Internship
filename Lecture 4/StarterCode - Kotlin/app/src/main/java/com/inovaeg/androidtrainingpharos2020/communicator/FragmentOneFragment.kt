@@ -55,6 +55,8 @@ class FragmentOneFragment : Fragment() {
         }
     }
 
+    // Tied to a class rather than to instances
+    // like (Static Methods) & (Static variables) in Java
     companion object {
         // TODO: Rename parameter arguments, choose names that match
         // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -80,3 +82,12 @@ class FragmentOneFragment : Fragment() {
         }
     }
 }
+
+
+// Instance methods vs Static methods in Java
+// Instance method are methods which require an object of its class to be created before it can be called.
+    // To invoke a instance method, we have to create an Object of the class in within which it defined.
+// Static methods are the methods in Java that can be called without creating an object of class.
+   // They are referenced by the class name itself or reference to the Object of that class.
+   // methods which belongs to the class and not to the object
+   // can access only static data.
