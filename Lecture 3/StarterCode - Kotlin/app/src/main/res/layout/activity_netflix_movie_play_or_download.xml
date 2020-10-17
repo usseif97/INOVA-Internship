@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/poster2_blured" />
+
+    <ImageView
+        android:id="@+id/app_logo2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/poster2"
+        android:background="@drawable/bg_elevation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintWidth_percent="0.5"/>
+
+    <TextView
+        android:id="@+id/match_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/percent_match"
+        style="@style/MovieMatchTextViewStyle"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/year_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/app_logo2" />
+
+    <TextView
+        android:id="@+id/year_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2019"
+        style="@style/TitleTextViewStyle"
+        app:layout_constraintStart_toEndOf="@+id/match_text_view"
+        app:layout_constraintEnd_toStartOf="@+id/restrict_text_view"
+        app:layout_constraintTop_toTopOf="@+id/match_text_view"
+        app:layout_constraintBottom_toBottomOf="@+id/match_text_view"/>
+
+    <TextView
+        android:id="@+id/restrict_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_18"
+        android:background="@drawable/bg_react_gray2"
+        style="@style/TitleTextViewStyle"
+        android:padding="5dp"
+        app:layout_constraintStart_toEndOf="@+id/year_text_view"
+        app:layout_constraintEnd_toStartOf="@+id/seasons_text_view"
+        app:layout_constraintTop_toTopOf="@+id/match_text_view"
+        app:layout_constraintBottom_toBottomOf="@+id/match_text_view"/>
+
+    <TextView
+        android:id="@+id/seasons_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_5_seasons"
+        style="@style/TitleTextViewStyle"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintStart_toEndOf="@+id/restrict_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/match_text_view"
+        app:layout_constraintBottom_toBottomOf="@+id/match_text_view"/>
+
+    <Button
+        android:id="@+id/play_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/match_text_view"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="15dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:drawableStart="@drawable/ic_play"
+        android:text="@string/play"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@drawable/bg_rect_white"/>
+
+    <Button
+        android:id="@+id/download_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_btn2"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:drawableStart="@drawable/ic_check"
+        android:text="@string/download_s1_e1"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:background="@android:drawable/screen_background_dark_transparent"/>
+
+    <TextView
+        android:id="@+id/story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/story"
+        style="@style/TitleTextViewStyle"
+        android:layout_marginTop="25dp"
+        android:paddingHorizontal="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/download_btn" />
+
+    <Button
+        android:id="@+id/mylist_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/play_btn3"
+        app:layout_constraintTop_toBottomOf="@+id/story"
+        android:layout_marginTop="15dp"
+        style="@style/WhiteTextViewStyle"
+        android:drawableTop="@drawable/ic_add"
+        android:text="@string/my_list"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/play_btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/mylist_btn2"
+        app:layout_constraintEnd_toEndOf="@+id/info_btn2"
+        app:layout_constraintTop_toTopOf="@+id/mylist_btn2"
+        app:layout_constraintBottom_toBottomOf="@+id/mylist_btn2"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:drawableStart="@drawable/ic_play"
+        android:text="@string/play"
+        android:background="@drawable/bg_rect_white"/>
+
+    <Button
+        android:id="@+id/info_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/play_btn3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mylist_btn2"
+        app:layout_constraintBottom_toBottomOf="@+id/mylist_btn2"
+        style="@style/WhiteTextViewStyle"
+        android:drawableTop="@drawable/ic_info"
+        android:text="@string/info"
+        android:background="@android:color/transparent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

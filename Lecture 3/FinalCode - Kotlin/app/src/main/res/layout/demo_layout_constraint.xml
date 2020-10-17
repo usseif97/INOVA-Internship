@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_red"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Red"
+        android:textAlignment="center"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <TextView
+        android:id="@+id/tv_green"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Red"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/tv_blue"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toEndOf="@id/tv_red"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.25" />
+
+    <TextView
+        android:id="@+id/tv_blue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_dark"
+
+        android:text="Red"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/tv_gray"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toEndOf="@id/tv_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.25" />
+
+    <TextView
+        android:id="@+id/tv_gray"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:background="@android:color/darker_gray"
+        android:text="Red"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toEndOf="@id/tv_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.25" />
+
+    <TextView
+        android:id="@+id/row_one"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        android:text="row one"
+        android:textColor="@color/lightGray2"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/row_two"
+        app:layout_constraintTop_toBottomOf="@+id/tv_red" />
+
+    <TextView
+        android:id="@+id/row_two"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        android:text="row two"
+        android:textColor="@color/lightGray2"
+        android:textSize="32sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/row_three"
+        app:layout_constraintTop_toBottomOf="@+id/row_one" />
+
+    <TextView
+        android:id="@+id/row_three"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        android:text="row three"
+        android:textColor="@color/lightGray2"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/row_four"
+        app:layout_constraintTop_toBottomOf="@+id/row_two" />
+
+    <TextView
+        android:id="@+id/row_four"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        android:text="row four"
+        android:textColor="@color/lightGray2"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row_three" />
+
+    <!--
+
+      <TextView
+          android:layout_width="0dp"
+
+          android:layout_height="match_parent"
+          android:background="@android:color/holo_blue_bright"
+          android:text="Blue" />
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:background="@android:color/darker_gray"
+          android:text="Yellow" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

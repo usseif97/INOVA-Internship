@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".finaldemo.NetflixMovieOverviewActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/poster" />
+
+    <ImageView
+        android:id="@+id/iv_movie_overview_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo_netflix_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_movie_overview_tv_shows"
+        style="@style/TitleTextViewStyle"
+        android:text="@string/tv_shows"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_movie_overview_logo"
+        app:layout_constraintEnd_toStartOf="@+id/tv_movie_overview_movies"
+        app:layout_constraintStart_toEndOf="@id/iv_movie_overview_logo"
+        app:layout_constraintTop_toTopOf="@+id/iv_movie_overview_logo" />
+
+    <TextView
+        android:id="@+id/tv_movie_overview_movies"
+        style="@style/TitleTextViewStyle"
+        android:text="@string/movies"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_movie_overview_tv_shows"
+        app:layout_constraintEnd_toStartOf="@+id/tv_movie_overview_my_list"
+        app:layout_constraintStart_toEndOf="@+id/tv_movie_overview_tv_shows" />
+
+    <TextView
+        android:id="@+id/tv_movie_overview_my_list"
+        style="@style/TitleTextViewStyle"
+        android:text="@string/my_list"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_movie_overview_tv_shows"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_movie_overview_movies" />
+
+    <TextView
+        android:id="@+id/tv_movie_overview_title"
+        style="@style/TitleTextViewStyle"
+        android:text="Peaky Bilnders"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/tv_movie_overview_types"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movie_overview_tv_shows"
+        app:layout_constraintVertical_bias="0.93"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <TextView
+        android:id="@+id/tv_movie_overview_types"
+        style="@style/WhiteTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_marginBottom="25dp"
+        android:text="Violent . Forceful . Period Piece . Drama . 1920s "
+        android:textAlignment="center"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@+id/btn_movie_overview_my_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_movie_overview_my_list"
+        style="@style/WhiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/ic_add"
+        android:text="@string/my_list"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_movie_overview_play"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_movie_overview_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rect_white"
+        android:drawableStart="@drawable/ic_play"
+        android:minHeight="37dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/play"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_movie_overview_my_list"
+        app:layout_constraintEnd_toStartOf="@id/btn_movie_overview_info"
+        app:layout_constraintStart_toEndOf="@+id/btn_movie_overview_my_list"
+        app:layout_constraintTop_toTopOf="@+id/btn_movie_overview_my_list" />
+
+    <Button
+        android:id="@+id/btn_movie_overview_info"
+        style="@style/WhiteTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:drawableTop="@drawable/ic_info"
+        android:text="@string/info"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_movie_overview_my_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_movie_overview_play"
+        app:layout_constraintTop_toTopOf="@+id/btn_movie_overview_my_list" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
