@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".facebooktTask.FacebookProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_percent="0.4" -->
+        <ImageView
+            android:id="@+id/cover_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/bg_react_black"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tony_stark"/>
+
+        <ImageButton
+            android:id="@+id/cover_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cover_image_view"
+            app:layout_constraintEnd_toEndOf="@+id/cover_image_view"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/camera"
+            android:background="@drawable/bg_react_gray2" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/youssef"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@android:color/white"/>
+
+        <ImageButton
+            android:id="@+id/profile_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_image_view"
+            app:layout_constraintEnd_toEndOf="@+id/profile_image_view"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/camera"
+            android:background="@drawable/bg_circle_gray"/>
+
+        <TextView
+            android:id="@+id/username_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Username"
+            style="@style/UserNameTextViewStyle"/>
+
+        <ImageButton
+            android:id="@+id/story_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username_text_view"
+            app:layout_constraintEnd_toStartOf="@+id/view_as_btn"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/add_more"
+            android:background="@drawable/bg_circle_gray"/>
+
+        <TextView
+            android:id="@+id/story_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/story_btn"
+            app:layout_constraintStart_toStartOf="@+id/story_btn"
+            app:layout_constraintEnd_toEndOf="@+id/story_btn"
+            android:text="@string/add_to_story"
+            style="@style/TitleTextViewStyleBlack"/>
+
+        <ImageButton
+            android:id="@+id/view_as_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="@+id/story_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/story_btn"
+            app:layout_constraintStart_toEndOf="@+id/story_btn"
+            app:layout_constraintEnd_toStartOf="@+id/edit_profile_btn"
+            android:src="@drawable/eye"
+            android:background="@drawable/bg_circle_gray"/>
+
+        <TextView
+            android:id="@+id/view_as_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/story_btn"
+            app:layout_constraintStart_toStartOf="@+id/view_as_btn"
+            app:layout_constraintEnd_toEndOf="@+id/view_as_btn"
+            android:text="@string/view_as"
+            style="@style/TitleTextViewStyleBlack"/>
+
+        <ImageButton
+            android:id="@+id/edit_profile_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="@+id/story_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/story_btn"
+            app:layout_constraintStart_toEndOf="@+id/view_as_btn"
+            app:layout_constraintEnd_toStartOf="@+id/more_btn"
+            android:src="@drawable/edit_profile"
+            android:background="@drawable/bg_circle_gray"/>
+
+        <TextView
+            android:id="@+id/edit_profile_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/story_btn"
+            app:layout_constraintStart_toStartOf="@+id/edit_profile_btn"
+            app:layout_constraintEnd_toEndOf="@+id/edit_profile_btn"
+            android:text="@string/edit_profile"
+            style="@style/TitleTextViewStyleBlack"/>
+
+        <ImageButton
+            android:id="@+id/more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="@+id/story_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/story_btn"
+            app:layout_constraintStart_toEndOf="@+id/edit_profile_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/more"
+            android:background="@drawable/bg_circle_gray"/>
+
+        <TextView
+            android:id="@+id/more_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/story_btn"
+            app:layout_constraintStart_toStartOf="@+id/more_btn"
+            app:layout_constraintEnd_toEndOf="@+id/more_btn"
+            android:text="@string/more"
+            style="@style/TitleTextViewStyleBlack"/>
+
+        <ImageView
+            android:id="@+id/study_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/story_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/study_text_view"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/graduation_cap"/>
+
+        <TextView
+            android:id="@+id/study_text_view"
+            style="@style/TitleTextViewStyleBlack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="study"
+            app:layout_constraintBottom_toBottomOf="@+id/study_image_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/study_image_view"
+            app:layout_constraintTop_toTopOf="@+id/study_image_view"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintWidth_percent="0.85"/>
+
+        <ImageView
+            android:id="@+id/address_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/study_image_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/address_text_view"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/home"/>
+
+        <TextView
+            android:id="@+id/address_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/address_image_view"
+            app:layout_constraintBottom_toBottomOf="@+id/address_image_view"
+            app:layout_constraintStart_toStartOf="@+id/study_text_view"
+            android:text="address"
+            style="@style/TitleTextViewStyleBlack"/>
+
+        <ImageView
+            android:id="@+id/about_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/address_image_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/about_text_view"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/more"/>
+
+        <TextView
+            android:id="@+id/about_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/about_image_view"
+            app:layout_constraintBottom_toBottomOf="@+id/about_image_view"
+            app:layout_constraintStart_toStartOf="@+id/study_text_view"
+            android:text="See About Info"
+            style="@style/TitleTextViewStyleBlack"/>
+
+        <Button
+            android:id="@+id/edit_details_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about_image_view"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="15dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            style="@style/TitleTextViewStyleBlack"
+            android:text="@string/edit_public_details"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:background="@drawable/bg_react_blue"/>
+
+        <View
+            android:id="@+id/border1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="20dp"
+            android:background="@color/lightGray2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_details_btn" />
+
+        <TextView
+            android:id="@+id/friends_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/border1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:text="@string/friends"
+            style="@style/UserNameTextViewStyle"/>
+
+        <TextView
+            android:id="@+id/friends_count_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/friends_text_view"
+            app:layout_constraintStart_toStartOf="@+id/friends_text_view"
+            android:layout_marginStart="10dp"
+            android:text="@string/_1_299_9_mutual"
+            style="@style/TitleTextViewStyleBlack"
+            android:textColor="@color/lightGray2"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/friend1_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/friends_count_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/friend2_card_view"
+            android:layout_marginTop="30dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintWidth_percent="0.25"
+            app:cardCornerRadius="10dp"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/friend1_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/friend1_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/friend1_card_view"
+            app:layout_constraintStart_toStartOf="@+id/friend1_card_view"
+            app:layout_constraintEnd_toEndOf="@+id/friend1_card_view"
+            android:text="@string/add_to_story"
+            style="@style/TitleTextViewStyleBlack"
+            android:textStyle="bold"
+            android:textSize="10sp"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/friend2_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="@+id/friend1_card_view"
+            app:layout_constraintStart_toEndOf="@+id/friend1_card_view"
+            app:layout_constraintEnd_toStartOf="@+id/friend3_card_view"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintWidth_percent="0.25"
+            app:cardCornerRadius="10dp"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/friend2_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/friend2_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/friend2_card_view"
+            app:layout_constraintStart_toStartOf="@+id/friend2_card_view"
+            app:layout_constraintEnd_toEndOf="@+id/friend2_card_view"
+            android:text="@string/add_to_story"
+            style="@style/TitleTextViewStyleBlack"
+            android:textStyle="bold"
+            android:textSize="10sp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/friend3_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="@+id/friend1_card_view"
+            app:layout_constraintStart_toEndOf="@+id/friend2_card_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintWidth_percent="0.25"
+            app:cardCornerRadius="10dp"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/friend3_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/friend3_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/friend3_card_view"
+            app:layout_constraintStart_toStartOf="@+id/friend3_card_view"
+            app:layout_constraintEnd_toEndOf="@+id/friend3_card_view"
+            android:text="@string/add_to_story"
+            style="@style/TitleTextViewStyleBlack"
+            android:textStyle="bold"
+            android:textSize="10sp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/friend4_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/friend1_card_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/friend2_card_view"
+            android:layout_marginTop="30dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintWidth_percent="0.25"
+            app:cardCornerRadius="10dp"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/friend4_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/friend4_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/friend4_card_view"
+            app:layout_constraintStart_toStartOf="@+id/friend4_card_view"
+            app:layout_constraintEnd_toEndOf="@+id/friend4_card_view"
+            android:text="@string/add_to_story"
+            style="@style/TitleTextViewStyleBlack"
+            android:textStyle="bold"
+            android:textSize="10sp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/friend5_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="@+id/friend4_card_view"
+            app:layout_constraintStart_toEndOf="@+id/friend4_card_view"
+            app:layout_constraintEnd_toStartOf="@+id/friend6_card_view"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintWidth_percent="0.25"
+            app:cardCornerRadius="10dp"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/friend5_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/friend5_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/friend5_card_view"
+            app:layout_constraintStart_toStartOf="@+id/friend5_card_view"
+            app:layout_constraintEnd_toEndOf="@+id/friend5_card_view"
+            android:text="@string/add_to_story"
+            style="@style/TitleTextViewStyleBlack"
+            android:textStyle="bold"
+            android:textSize="10sp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/friend6_card_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="@+id/friend4_card_view"
+            app:layout_constraintStart_toEndOf="@+id/friend5_card_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintWidth_percent="0.25"
+            app:cardCornerRadius="10dp"
+            android:elevation="5dp">
+
+            <ImageView
+                android:id="@+id/friend6_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/friend6_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/friend6_card_view"
+            app:layout_constraintStart_toStartOf="@+id/friend6_card_view"
+            app:layout_constraintEnd_toEndOf="@+id/friend6_card_view"
+            android:text="@string/add_to_story"
+            style="@style/TitleTextViewStyleBlack"
+            android:textStyle="bold"
+            android:textSize="10sp"/>
+
+        <Button
+            android:id="@+id/see_all_friends_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/friend4_card_view"
+            android:layout_marginTop="25dp"
+            android:layout_marginHorizontal="15dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            style="@style/TitleTextViewStyleBlack"
+            android:text="See All Friends"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/bg_react_gray3"/>
+
+        <View
+            android:id="@+id/border2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="20dp"
+            android:background="@color/lightGray2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/see_all_friends_btn" />
+
+        <TextView
+            android:id="@+id/timeline_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/border2"
+            android:padding="15dp"
+            android:layout_marginTop="5dp"
+            style="@style/UserNameTextViewStyle"
+            android:textStyle="bold"
+            android:text="@string/timeline"/>
+
+        <ImageButton
+            android:id="@+id/edit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            app:layout_constraintTop_toTopOf="@+id/timeline_text_view"
+            app:layout_constraintBottom_toBottomOf="@+id/timeline_text_view"
+            app:layout_constraintEnd_toStartOf="@+id/settings_btn"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/edit"
+            android:background="@drawable/bg_react_gray3"/>
+
+        <ImageButton
+            android:id="@+id/settings_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            app:layout_constraintTop_toTopOf="@+id/edit_btn"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/settings"
+            android:background="@drawable/bg_react_gray3"/>
+
+        <ImageView
+            android:id="@+id/profile_post_image_view"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/timeline_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintWidth_percent="0.2"
+            android:background="@drawable/bg_circle_gray"
+            android:src="@drawable/user_profile"/>
+
+        <EditText
+            android:id="@+id/post_profile_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/profile_post_image_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/profile_post_image_view"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_post_image_view"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintWidth_percent="0.7"
+            android:padding="15dp"
+            android:hint="@string/what_s_on_your_mind"
+            android:textSize="15sp"
+            android:focusable="false" />
+
+        <View
+            android:id="@+id/border3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="20dp"
+            android:background="@color/lightGray2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_post_image_view" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fb_posts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_2"
+            app:layout_constraintTop_toBottomOf="@+id/border3"
+            tools:context=".MoviesListActivity"
+            tools:itemCount="2"
+            tools:layout_editor_absoluteX="-19dp"
+            tools:listitem="@layout/task_facebook_post" />
+
+        <View
+            android:id="@+id/post1_border"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/lightGray2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fb_posts"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
