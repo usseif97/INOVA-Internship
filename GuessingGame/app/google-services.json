@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "34962196846",
+    "firebase_url": "https://inova-guessinggame.firebaseio.com",
+    "project_id": "inova-guessinggame",
+    "storage_bucket": "inova-guessinggame.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34962196846:android:c0f6ab2c757b15e99f597f",
+        "android_client_info": {
+          "package_name": "com.example.guessinggame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34962196846-iq2hktnv06jrra9ibvo5n1gf4omn81qm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSSZ0NSWH0CaWcH0cIUmQ_HkfAl4hKBpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34962196846-iq2hktnv06jrra9ibvo5n1gf4omn81qm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
